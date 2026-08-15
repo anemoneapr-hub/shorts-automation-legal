@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TikTok Auth Callback</title>
+</head>
+<body>
+<h1>Authorization code</h1>
+<p>Copy this code and paste it back into the shorts-automation script:</p>
+<pre id="code" style="font-size: 1.3em; padding: 12px; background: #eee; user-select: all;"></pre>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('code').textContent = params.get('code') || '(no code found in URL)';
+</script>
+</body>
+</html>
